@@ -1,0 +1,13 @@
+schema:
+  - graph/schema.graphqls
+exec:
+  filename: graph/generated/generated.go
+  package: generated
+resolver:
+  layout: follow-schema
+  dir: graph
+  package: graph
+models:
+  Time:
+    model:
+      - time.Time

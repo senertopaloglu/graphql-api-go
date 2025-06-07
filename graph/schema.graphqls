@@ -1,0 +1,25 @@
+scalar Time
+
+type Query {
+  walletBalance(address: String!): Balance!
+  tokenPrice(id: String!): TokenPrice!
+  transactionHistory(address: String!, limit: Int): [Transaction!]!
+}
+
+type Balance {
+  address: String!
+  ethBalance: String!
+}
+
+type TokenPrice {
+  id: String!
+  usd: Float!
+}
+
+type Transaction {
+  hash: String!
+  from: String!
+  to: String!
+  value: String!
+  timeStamp: Time!
+}
